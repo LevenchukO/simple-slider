@@ -1,0 +1,65 @@
+:host {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: #cccccc;
+    &:hover{
+      .img-container{
+        .arrows{
+          display: block;
+        }
+      }
+    }
+    .img-container {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      will-change: opacity;
+      transition: opacity 1.3s;
+      opacity: 0;
+      &.selected {
+        opacity: 1;
+        transition: .6s;
+      }
+    }
+  }
+}
+
+.arrows{
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+  cursor: pointer;
+  display: none;
+  transition: .7s;
+  &.prev{
+    border-bottom: rgba(455,455,455,.3) 6px solid;
+    border-left: rgba(0,0,0,.2) 6px solid;
+    transform: rotate(45deg);
+    left: 40px;
+  }
+  &.next{
+    border-bottom:rgba(0,0,0,.2)  6px solid;
+    border-left: rgba(455,455,455,.3) 6px solid;
+    transform: rotate(-135deg);
+    right: 40px;
+  }
+}
+
+.text{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 50px;
+  font-size: 30px;
+}

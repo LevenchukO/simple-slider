@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import { MySliderComponent } from './my-slider/my-slider.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MySliderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

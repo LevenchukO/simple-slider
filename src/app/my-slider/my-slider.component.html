@@ -1,0 +1,13 @@
+<div class="container" (mouseenter)="isAlive = false" (mouseleave)="isAlive = true">
+<div class="img-container" *ngFor="let i of sliderArray; let select = index;"
+     [ngClass]="{'selected': select === selectedIndex}" [style.background-image]="sanImg(i.img)"
+     (swipeleft)="swipeleft()" (swiperight)="swiperight()"
+>
+  <div class="arrows prev" (click)="downSelected( 'next')"></div>
+  <div class="arrows next" (click)="downSelected( 'prev')"></div>
+  <div class="text">{{i.text}}</div>
+</div>
+
+</div>
+
+
